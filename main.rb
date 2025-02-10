@@ -16,7 +16,7 @@ levels = {1 => ['Easy', 10], 2 => ['Medium', 5], 3 => ['Hard', 3]}
 attempts = levels[difficulty]
 initial_chances = 0
 
-puts "Incorrect level selected. Please try again." if attempts.nil?
+return puts "Incorrect level selected. Please try again." if attempts.nil?
 
 
 if attempts
