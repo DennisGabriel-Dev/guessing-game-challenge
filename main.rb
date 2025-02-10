@@ -41,3 +41,5 @@ while(attempts > 0) do
     end
   end
 end
+
+puts "Sorry, you have run out of attempts. The correct number was #{rand}."
