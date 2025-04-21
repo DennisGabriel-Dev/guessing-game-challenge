@@ -30,16 +30,19 @@ while(attempts > 0) do
   print("Enter your guess: ")
   guess = gets.chomp.to_i
   attempts -= 1
-  if guess == rand
-    puts "Congratulations! You guessed the correct number in #{initial_chances - attempts} attempts."
-    return
-  else
+  if guess != rand
     if guess > rand
       puts "Incorrect! The number is less than #{guess}."
     elsif guess < rand
       puts "Incorrect! The number is greater than #{guess}."
     end
+    next
   end
+
+  puts "Congratulations! You guessed the correct number in #{initial_chances - attempts} attempts."
+  return
 end
 
-puts "Sorry, you have run out of attempts. The correct number was #{rand}."
+if attempts.zero?
+  puts "Sorry, you have run out of attempts. The correct number was #{rand}."
+end
